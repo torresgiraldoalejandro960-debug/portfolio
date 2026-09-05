@@ -1,12 +1,15 @@
-import { Header } from "./Header/Header"
+import { Hero } from './modules/Hero/Hero';
 
-export const App = () => {
-  return(
-    // fragment: etiqueta vacia 
-    <>
-    <Header/>
-    <h1> Bienvenido </h1>
-    <h2> a mi mundo </h2>
-    </>
-  )
-}
+const App = () => {
+  return (
+    <main>
+      <Hero 
+        nombre="Alejandro Torres Giraldo"
+        titulo="Desarrollador Full-Stack"
+        descripcion="Estudiante de Análisis y Desarrollo de Software en SENA, apasionado por crear soluciones innovadoras."
+      />
+    </main>
+  );
+};
+
+export { App };
