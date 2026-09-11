@@ -1,4 +1,5 @@
 import styles from './Contact.module.css';
+import { generatePDF } from '../../utils/generatePDF';
 
 const Contact = ({ email, telefono }) => {
   return (
@@ -13,6 +14,12 @@ const Contact = ({ email, telefono }) => {
         <a href={`tel:${telefono}`} className={styles.contactLink}>
           📱 {telefono}
         </a>
+      </div>
+
+      <div className={styles.downloadSection}>
+        <button onClick={generatePDF} className={styles.downloadButton}>
+          📥 Descargar Portafolio PDF
+        </button>
       </div>
     </section>
   );
