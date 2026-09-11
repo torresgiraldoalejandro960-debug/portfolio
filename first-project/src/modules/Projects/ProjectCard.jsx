@@ -1,11 +1,13 @@
+import styles from './Projects.module.css';
+
 const ProjectCard = ({ nombre, descripcion, tecnologias }) => {
   return (
-    <div className="cardContainer">
+    <div className={styles.cardContainer}>
       <h3>{nombre}</h3>
       <p>{descripcion}</p>
-      <div className="tecnologias">
+      <div className={styles.tecnologias}>
         {tecnologias.map((tech, index) => (
-          <span key={index} className="tech">{tech}</span>
+          <span key={index} className={styles.tech}>{tech}</span>
         ))}
       </div>
     </div>

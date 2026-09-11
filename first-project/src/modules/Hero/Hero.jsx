@@ -1,10 +1,12 @@
+import styles from './Hero.module.css';
+
 const Hero = ({ nombre, titulo, descripcion }) => {
   return (
-    <section className="heroContainer">
+    <section className={styles.heroContainer}>
       <h1>{nombre}</h1>
-      <p className="heroSubtitle">{titulo}</p>
-      <p className="heroDescription">{descripcion}</p>
-      <button className="heroButton">Contactame</button>
+      <p className={styles.heroSubtitle}>{titulo}</p>
+      <p className={styles.heroDescription}>{descripcion}</p>
+      <button className={styles.heroButton}>Contactame</button>
     </section>
   );
 };

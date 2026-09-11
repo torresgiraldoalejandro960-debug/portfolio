@@ -1,0 +1,108 @@
+.experienceContainer {
+  background-color: #1e293b;
+  color: white;
+  padding: 60px 20px;
+}
+
+.experienceContainer h2 {
+  font-size: 2.5rem;
+  color: #6366f1;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.timelineContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timelineContainer::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background-color: #334155;
+}
+
+.itemContainer {
+  display: flex;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.itemContainer:nth-child(odd) {
+  flex-direction: row;
+}
+
+.itemContainer:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.yearBadge {
+  width: 150px;
+  padding: 12px;
+  background-color: #6366f1;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.itemContent {
+  flex: 1;
+  padding: 0 20px;
+  background-color: #0f172a;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 2px solid #6366f1;
+}
+
+.itemContainer:nth-child(even) .itemContent {
+  border-left: none;
+  border-right: 2px solid #6366f1;
+}
+
+.itemContent h3 {
+  font-size: 1.3rem;
+  color: #6366f1;
+  margin-bottom: 5px;
+}
+
+.institucion {
+  font-size: 1rem;
+  color: #94a3b8;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.descripcion {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .timelineContainer::before {
+    display: none;
+  }
+
+  .itemContainer,
+  .itemContainer:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .yearBadge {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .itemContent,
+  .itemContainer:nth-child(even) .itemContent {
+    border-left: 2px solid #6366f1;
+    border-right: none;
+  }
+}
